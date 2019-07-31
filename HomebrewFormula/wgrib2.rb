@@ -13,8 +13,6 @@ class Wgrib2 < Formula
   end
 
   test do
-    output = `#{bin}/wgrib2 --version`
-    assert output.include? version
-    assert_equal 8, $CHILD_STATUS.exitstatus
+    assert `#{bin}/wgrib2 --version`.include? version
   end
 end
